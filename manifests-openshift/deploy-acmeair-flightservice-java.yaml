@@ -21,7 +21,7 @@ spec:
         ports:
           - containerPort: 9080
           - containerPort: 9443
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         env:
         - name: USERNAME
           value: admin
@@ -101,6 +101,7 @@ spec:
         ports:
         - containerPort: 27017
           protocol: TCP
+        imagePullPolicy: IfNotPresent
         resources: {}
         volumeMounts:
           - name: acmeair-flight-db-1
